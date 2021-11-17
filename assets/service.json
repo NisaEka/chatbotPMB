@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ivory-duality-331118",
+  "private_key_id": "732d611a0f48b2da0e16e798b11c390aa0abf406",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChvRan1Cu63mxR\n370O2hB02+elZU2nQQwrBGmI/Vpqnbr4fFK57UiuOhYnLaaHOLvyPcRcrOtRKB4F\nFqKoaCdOMO4R6icjZ4038rLNd8OtmjkBXf41LhEWGIDxlIPovm9HZiz4kM3XFWcK\nfVs9Tfz/N1HgzRDedeycBPN04xziJ5aJR/DkyjF76uc0bq+oEFgM5knEVB4htfkd\nfg+JWjL+fvfHvy6gMJTB2W2HenV+8pVuKEoepl475Zg51l/8pMj5lWyGndUpUUj/\n3SKuW3gqdB26O73IOg59Yto2W+VpjVAiKwy0KZ07Jee34daLxlAE7tnGKeoU8AQw\nRnhw+NmFAgMBAAECggEAC3+urVPk9VjRiVNHf6zP4AmvrbnxYWNl2BEXkl5gypUC\n2/O1dfPWvPxIOD+DSA3SiZBhS4LHtXINYFM8UTjGbUVb8k4cEOT7Ie/RTSZR9R+y\nedRoOaOtd01arXzfkUZ+EYIZebqMcoQvr+E7AWAat+euRzXibc54efHS1TaTBnOo\n+7FgHm+vYk6oHxZ6aupzgWCjV3w/L0mSXhzZsoh5A4AU7S/rSyHFGAAVXrzxnuCO\nSsa7sq5j8uj9zE7VoBrFEPeB1sh2R8+39szBf/oC+AcoUXSss0nj3jQfrUHSyGgj\nwI84vGXA5eckXDYDxDNEFUcFcZ9L+QitfkADBozkKQKBgQDhnTktoi2Z5xHcYL/6\nFFui1EzmN6rltkJ0kx8ggXsAresoGWTpxXBt9/yyy6OsM1BXgJEOJHCNNjTM36Jj\n+Q08xHrTOPimRkT6IbgiPa7R+jekFnJFZTsbdYfbgHbBPPG64/2Bx2QMqmNMb5ne\npXxizfC+X9xsEgmqL6DABmlCowKBgQC3hYzQPLmmFkF8D6XV6sMLFr8BAr0leLS8\nfYU4sFsZxlpHwSIp39tavbXBD+KiZ8FP8xoex5WHsVsLKXOmNscQfTtDphZ0bio/\nDVs7l6NLIGfTKfpJwpCrTlR/+LvbtZ9rmAxuobEqGLAq8K483DIaKlTgy2UHwTmU\njtTm1LddtwKBgCCWTv3yYNfL8l58cv4yFpJMS9cszzhivPKNlX9idFvCwyaFlHfX\nlserfApvM3LZ7o7U+R6r0L30yGeXHaOHA4x1bLA5mGCb4banTCtV8XxOwd6nh1XS\nq1jp/veLdJuwq9GswJ8QJ7lUmwcdT4JDMNYsnMtCmVnauR6lxng19No1AoGAfx2g\nBXSqWqI7xYTJJzyu0HV242pUPSo4df6zUirFTzsWuXDLCxolQ9r3k7w/DKK1QX1v\ncDZqGkz8dOTHWC/E/mTfseHO1+KenIHR2ZsU3iqZ/6ep14FO13kwClvtMyfAPrRY\nmCCjKDdlfriq1zjl8z2zAOmhFxf9nCq6yRA52k0CgYAepa9IXPLsxA1eEXrRBybP\nFSAYca7d8qRYT4Qa97KtS0F59sORhwnXqDzlut4xTtLat6zVUqRDs144zPTO/+lS\nxZycwqGBY7MlJQ6NIOfqZfxJcJ9Jt0sHpEQKk0uRYPS68lnA06+t+4M5uK9xAd3y\n1sAUNxCDOYAffodhP8rAug==\n-----END PRIVATE KEY-----\n",
+  "client_email": "chatbotpmb@ivory-duality-331118.iam.gserviceaccount.com",
+  "client_id": "114407575356919368946",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/chatbotpmb%40ivory-duality-331118.iam.gserviceaccount.com"
+}

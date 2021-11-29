@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dialogflow/dialogflow_v2.dart';
 import 'package:intl/intl.dart';
 import 'package:bubble/bubble.dart';
+import 'package:link_text/link_text.dart';
+// import 'package:sound_stream/sound_stream.dart';
+// import 'package:dialog_flowtter/dialog_flowtter.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -49,22 +53,27 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
   final messageInsert = TextEditingController();
+  // ignore: deprecated_member_use
   final List<Map> messsages = List();
 
   void response(query) async {
     AuthGoogle authGoogle = await AuthGoogle(fileJson: "assets/service.json").build();
-    Dialogflow dialogflow = Dialogflow(authGoogle: authGoogle, language: Language.english);
+    Dialogflow dialogflow = Dialogflow(authGoogle: authGoogle, language: Language.indonesian);
     AIResponse aiResponse = await dialogflow.detectIntent(query);
     setState(() {
       messsages.insert(0, {
         "data": 0,
-        "message": aiResponse.getMessage() ??
+        "message": LinkText(
+          aiResponse.getMessage() ??
           CardDialogflow(aiResponse.getListMessage()[0]).title,
+        ) 
       });
     });
 
     // print(aiResponse.getListMessage()[0]["text"]["text"][0].toString());
    }
+
+   
    
 
   

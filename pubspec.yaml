@@ -33,7 +33,10 @@ dependencies:
   flutter_dialogflow: 
   async:
   link_text: ^0.2.0
+  spell_checker:
   url_launcher: 
+  onboarding: ^2.1.0
+  
 
 dev_dependencies:
   flutter_test:

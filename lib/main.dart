@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:chatbotpmb/chatbot.dart';
-// import 'package:sound_stream/sound_stream.dart';
-// import 'package:dialog_flowtter/dialog_flowtter.dart';
+import 'package:chatbotpmb/intro.dart';
 
 
 void main() {
-  runApp(ChatbotPage());
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    title: 'Intro layout',
+    home: IntroPage(),
+  ));
 }
 
 

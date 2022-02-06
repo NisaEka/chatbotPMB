@@ -36,6 +36,7 @@ dependencies:
   spell_checker:
   url_launcher: 
   onboarding: ^2.1.0
+  flutter_swiper:
   
 
 dev_dependencies:
@@ -52,6 +53,8 @@ flutter:
   - assets/service.json
   - assets/default.png
   - assets/robot.png
+  - assets/board1.png
+  - assets/board2.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

@@ -1,86 +1,101 @@
 import 'package:flutter/material.dart';
-import 'package:onboarding/onboarding.dart';
+import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:chatbotpmb/color_palette.dart';
+import 'package:chatbotpmb/chatbot.dart';
 
-class IntroPage extends StatelessWidget {
 
-  final onboardPagesList = [
-    PageModel(
-      widget: Column(
-        children: [
-          Container(
-              padding: EdgeInsets.only(bottom: 45.0),
-              child: Image.asset('assets/images/facebook.png',
-                  color: pageImageColor)),
-          Container(
-              width: double.infinity,
-              child: Text('SECURED BACKUP', style: pageTitleStyle)),
-          Container(
-            width: double.infinity,
-            child: Text(
-              'Keep your files in closed safe so you can\'t lose them',
-              style: pageInfoStyle,
-            ),
-          ),
-        ],
-      )
-    ),
-    PageModel(
-      widget: Column(
-        children: [
-          Image.asset('assets/images/twitter.png', color: pageImageColor),
-          Text('CHANGE AND RISE', style: pageTitleStyle),
-          Text(
-            'Give others access to any file or folder you choose',
-            style: pageInfoStyle,
-          )
-        ],
-      ),
-    ),
-    PageModel(
-      widget: Column(
-        children: [
-          Image.asset('assets/images/instagram.png', color: pageImageColor),
-          Text('EASY ACCESS', style: pageTitleStyle),
-          Text(
-            'Reach your files anytime from any devices anywhere',
-            style: pageInfoStyle,
-          ),
-        ],
-      ),
-    ),
+class Intro{
+  String image;
+  // String title;
+  // String description;
+
+  Intro({this.image});
+}
+
+class IntroPage extends StatefulWidget {
+  @override
+  _IntroPageState createState() => _IntroPageState();
+}
+
+class _IntroPageState extends State<IntroPage> {
+
+  final List<Intro> introList = [
+    Intro(image: "assets/board1.png"),
+    Intro(image: "assets/board2.png")
   ];
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Intro Page',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: Onboarding(
-        proceedButtonStyle: ProceedButtonStyle(
-          proceedButtonRoute: (context) {
-            return Navigator.pushAndRemoveUntil(
-              context,
-              MaterialPageRoute(
-                builder: (context) => Container(),
-              ), 
-              (route)=> false,
-            );
-          }
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Swiper.children(
+        index: 0,
+        autoplay: false,
+        loop: false,
+        pagination: SwiperPagination(
+          margin: EdgeInsets.only(bottom: 20.0),
+          builder: DotSwiperPaginationBuilder(
+            color: ColorPalette.dotColor,
+            activeColor: ColorPalette.dotActiveColor,
+            size: 10.0,
+            activeSize: 10.0,
+          ),
         ),
-        pages: onboardPagesList,
-        isSkippable: true,
-        indicator: Indicator(
-          indicatorDesign: IndicatorDesign.polygon(
-            polygonDesign: PolygonDesign(
-              polygon: DesignType.polygon_circle,
-            )
-          )
+        control: SwiperControl(
+          iconNext: null,
+          iconPrevious: null,
         ),
+        children:
+          _buildPage(context),
       ),
     );
+  }
+
+
+  List<Widget> _buildPage(BuildContext context){
+    List<Widget> widgets = [];
+    for (int i = 0; i < introList.length; i++) {
+      Intro intro = introList[i];
+      widgets.add(
+        Container(
+          padding: EdgeInsets.only(
+            // top: 30,
+          ),
+          child: ListView(
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.only(left: 250, right: 10, top: 10),
+                // ignore: deprecated_member_use
+                child:  FlatButton(
+                  child: Text("Lewati"),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                    side: BorderSide(color: Colors.black)
+                  ),
+                  color: Colors.white,
+                  textColor: Colors.black,
+                  onPressed: () { 
+                    // Navigator.pop(context, MaterialPageRoute(builder: (context) => ChatbotPage(),));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ChatbotPage(),));
+                  }
+                ),
+              ),
+             
+              SizedBox(width: 10.0,),
+              Image.asset(
+                intro.image,
+                height: 550,
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  // top: MediaQuery.of(context).size.height/12.0,
+                ),
+              ),
+            ],
+          ),
+        )
+      );
+    }
+    return widgets;
   }
 }

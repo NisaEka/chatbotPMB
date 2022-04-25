@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:chatbotpmb/chatbot.dart';
 import 'package:chatbotpmb/intro.dart';
 
 

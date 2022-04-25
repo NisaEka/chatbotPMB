@@ -83,6 +83,30 @@ class _MyChatbotPageState extends State<MyChatbotPage> {
       print("list spell : " + listspell);
       print("spell correction : "+ spellMsg.toString());
   }
+  // void similar(message, template){
+  //   var similar;
+  //   List<Map> b1= List();
+  //   List<Map> b2= List();
+  //   List<Map> b12= List();
+  //   List<Map> b21= List();
+  //   Float c1, c2, c12, c21;
+
+  //   b1.add(message);
+  //   b2.add(template);
+
+  //   b12 = b1.retainAll(b2);
+  //   b21 = b2.retainAll(b1);
+
+  //   c1 = b1.length();
+  //   c12 = b2.length();
+  //   c12 = b12.length();
+  //   c21 = b21.length();
+
+  //   similar = (c12+c21) / (c1+c2);
+
+  //   return similar;
+
+  // }
   
   
   @override
@@ -90,7 +114,7 @@ class _MyChatbotPageState extends State<MyChatbotPage> {
     if(messsages.isEmpty){
         messsages.add({
           "data": 0, 
-          "message": "Halo, apa yang ingin anda ketahui seputar informasi PMB UIN Bandung?"
+          "message": "Assalamu'alaikum, apa yang ingin anda ketahui seputar informasi PMB UIN Bandung?"
         });
     }
     return new Scaffold(
@@ -222,10 +246,7 @@ class _MyChatbotPageState extends State<MyChatbotPage> {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-
-                  SizedBox(
-                    width: 10.0,
-                  ),
+                  SizedBox(width: 10.0),
                   Flexible(
                       child: Container(
                         constraints: BoxConstraints( maxWidth: 200),
